@@ -11,6 +11,9 @@ $(".horror-movies").empty();
 // Create the buttons
     var btn = $("<button>");
     btn.text(topics[i]);
+    btn.addClass("movie_titles");
+    btn.addClass("btn btn-danger");
+    btn.attr("data-name",topics[i]);
     $(".horror-movies").append(btn);
  }   
 }
@@ -19,11 +22,24 @@ $("#add-horror-movie").on("click", function(event) {
     var userInput = $("#movie-input").val();
     topics.push(userInput);
     movieButtons();
-  });
+  });               
+//Display gifs
+function displayGifs(){
+    var movie_titles = $(this).attr("data-name");
+    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + movie_titles + "&api_key=Khb1ujj48KAfX8LotZZQX8bCJG8gasfB&limit=10";
+    console.log(queryURL); 
+    $.ajax({
+        url: queryURL,
+        method: 'GET'
+      }).then(function(response) {
+        console.log(response);
+        $('#gifoptions').text(JSON.stringify(response));
+      });
+      }
 
 // Provide rating.
 // Make gifs capable of starting and stopping by on click
 // Create the ability for user to add additional Horror movies.
 // Call functions to run
 movieButtons();
-// DOM / Onclick
+displayGifs();
