@@ -36,7 +36,22 @@ html, body{
     color:white;
 }
 
-/* #horror-gifs{
-    background-color: black;
+p{
+    color:red;
+    text-align: center;
+    font-weight: bold;
+}
 
+/* .gif{
+    float: left;
 } */
+
+.clear{
+    clear: both;
+}
+
+.test{
+    display: inline-block;
+    margin: 5px;
+    /* float: left; */
+}
