@@ -17,7 +17,7 @@ function movieButtons() {
     $(".horror-movies").append(btn);
     // console.log(btn)
   }
-}
+} // Create the ability for user to add additional Horror movies.
 $("#add-horror-movie").on("click", function (event) {
   event.preventDefault();
   var userInput = $("#movie-input").val();
@@ -46,6 +46,7 @@ function displayMovies() {
           for (var i=0; i< results.length; i++ ){
               var movieDiv = $("<div class='test'>");
               $("#horror-gifs").css("background-color","black");
+              // Provide rating.
               var rating = results[i].rating;
               var p = $("<p>").text("Rating: " + rating);
               // p.css({color:"red", "backgroundColor:"white"}
@@ -62,7 +63,7 @@ function displayMovies() {
 }
   });
  };
-
+// Make gifs capable of starting and stopping by on click
 $(document).on("click", ".gif", function() {
   // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
   var state = $(this).attr("data-state");
@@ -79,9 +80,6 @@ $(document).on("click", ".gif", function() {
   }
 });
 
-// Provide rating.
-// Make gifs capable of starting and stopping by on click
-// Create the ability for user to add additional Horror movies.
 // Call functions to run
 $(document).on("click", ".scary", displayMovies)
 movieButtons();
