@@ -3,6 +3,22 @@ html, body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
 }
+.header{
+    background-color: black;
+    text-align: center;
+}
+
+.display-4{
+    background-color: black!important;
+    color: red !important;
+    font-weight: bold !important;
+    font-size: 100px !important;
+}
+
+.movie-titles{
+    text-align: center;
+    margin: 20px; 
+}
 
 .form{
     background-color: black;
@@ -19,3 +35,8 @@ html, body{
     background-color: black;
     color:white;
 }
+
+/* #horror-gifs{
+    background-color: black;
+
+} */
